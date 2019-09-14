@@ -10,7 +10,7 @@ import ModalRegisterMinutesWorked from '../ModalRegisterMinutesWorked';
 
 import { Container, ListGroupItem, Button } from './styles';
 
-export default function Project({ project }) {
+export default function Project({ project, setReloadProjects }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalMinutesOpen, setModalMinutesOpen] = useState(false);
 
@@ -57,7 +57,9 @@ export default function Project({ project }) {
           openProjectDetails={openProjectDetails}
         />
         <ModalRegisterMinutesWorked
+          projectId={project.id}
           modalMinutesOpen={modalMinutesOpen}
+          setReloadProjects={setReloadProjects}
           openRegisterMinutesWorked={openRegisterMinutesWorked}
         />
       </div>

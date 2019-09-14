@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { parseISO, format } from 'date-fns';
 
 import { Modal, ModalHeader, ModalBody, Table } from 'reactstrap';
 
@@ -25,7 +26,7 @@ export default function ModalProjectDetails({
           <tbody>
             {minutesWorked.map(data => (
               <tr key={data.id}>
-                <td>{data.date}</td>
+                <td>{format(parseISO(data.date), 'dd/MM/yy hh:mm')}</td>
                 <td>{data.minutes_worked}</td>
                 <td>{data.user.name}</td>
               </tr>

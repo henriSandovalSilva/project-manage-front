@@ -8,11 +8,6 @@ export default function Example() {
     <div>
       <Navbar color="white" expand="xs">
         <NavbarBrand href="/">ProjectManage</NavbarBrand>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="#">Olá, usuário!</NavLink>
-          </NavItem>
-        </Nav>
       </Navbar>
     </div>
   );

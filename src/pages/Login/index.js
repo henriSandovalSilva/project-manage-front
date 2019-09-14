@@ -14,8 +14,6 @@ import {
 
 import { doLoginRequest } from '../../store/modules/auth/actions';
 
-// import { Container } from './styles';
-
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

@@ -7,6 +7,7 @@ import api from '../../services/api';
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
+  const [reloadProjects, setReloadProjects] = useState([]);
 
   useEffect(() => {
     async function loadProjects() {
@@ -15,13 +16,17 @@ export default function Home() {
     }
 
     loadProjects();
-  }, []);
+  }, [reloadProjects]);
 
   return (
     <>
       <Header />
-      {projects.map((project, index) => (
-        <ProjectCard project={project} />
+      {projects.map(project => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          setReloadProjects={setReloadProjects}
+        />
       ))}
     </>
   );
