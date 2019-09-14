@@ -1,3 +1,5 @@
+<img src="home.png" width="1000" title="Screenshot"><br/><br/>
+
 Depois de seguir as intruções do [backend](https://github.com/henriSandovalSilva/project-manage-backend).
 
 Execute no terminal:
