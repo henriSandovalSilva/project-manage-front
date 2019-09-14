@@ -6,13 +6,14 @@ import {
   Row,
   Col,
   Button,
-  Form,
   FormGroup,
   Label,
   Input,
 } from 'reactstrap';
 
 import { doLoginRequest } from '../../store/modules/auth/actions';
+
+import { Form } from './styles';
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -36,7 +37,7 @@ export default function Login() {
   return (
     <Container>
       <Row>
-        <Col md={{ size: 6, offset: 3 }}>
+        <Col md={{ size: 6, offset: 3 }} lg={{ size: 4, offset: 4 }}>
           <Form onSubmit={login}>
             <FormGroup>
               <Label for="email">E-mail</Label>

@@ -1,3 +1,6 @@
 import styled from 'styled-components';
+import { Form as FormBootstrap } from 'reactstrap';
 
-export const Container = styled.div``;
+export const Form = styled(FormBootstrap)`
+  margin-top: 15%;
+`;

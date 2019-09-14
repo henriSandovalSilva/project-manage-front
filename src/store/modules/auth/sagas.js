@@ -31,14 +31,19 @@ export function* doLogin({ email, password }) {
 export function setToken({ payload }) {
   if (!payload) return;
 
-  const { token } = payload.auth.user;
+  const { user } = payload.auth;
 
-  if (token) {
-    api.defaults.headers.Authorization = `Bearer ${token}`;
+  if (user && user.token) {
+    api.defaults.headers.Authorization = `Bearer ${user.token}`;
   }
+}
+
+export function doLogout({ payload }) {
+  history.push('/');
 }
 
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/LOGIN_REQUEST', doLogin),
+  takeLatest('@auth/LOGOUT', doLogout),
 ]);

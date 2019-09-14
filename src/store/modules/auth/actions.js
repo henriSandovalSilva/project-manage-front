@@ -12,3 +12,9 @@ export function doLoginSuccess(user) {
     user,
   };
 }
+
+export function doLogout() {
+  return {
+    type: '@auth/LOGOUT',
+  };
+}
